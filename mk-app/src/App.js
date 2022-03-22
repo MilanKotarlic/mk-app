@@ -1,5 +1,5 @@
 import logo from './milan.jpg';
-import './App.css';
+import './styles/main.scss';
 import { db, storage } from './firebase'
 import { collection, getDocs } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
