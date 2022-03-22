@@ -1,20 +1,24 @@
-import logo from './milan.jpg';
 import './styles/main.scss';
 import { db, storage } from './firebase'
 import { collection, getDocs } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
 import { getDownloadURL, ref } from 'firebase/storage';
+import Metronome from './components/metronome';
 
 
 function App() {
   const image = ref(storage, 'milan.jpg');
-  console.log(image)
-  
+  const vinylImage = ref(storage, 'vinyl.png');
+
   const [users, setUsers] = useState([]);
-  const [images, setImages] = useState('');
+  const [images, setImages] = useState([]);
   useEffect( () => {
-    getUsers()
-    getDownloadURL(image).then(url => setImages(url))
+    async function fetchData () {
+    await getUsers()
+    await getDownloadURL(image).then(url => setImages(url))
+    await getDownloadURL(vinylImage).then(url => setImages(prevState => [prevState, url]))
+    }
+    fetchData()
   }, [])
   async function getUsers() {
     const usersCol = collection(db, 'users');
@@ -25,12 +29,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={images} className="App-logo" alt="logo" />
+        <div className="App-logo">
+        <img className="App-logo__image App-logo__image--big" src={images[1]} alt="logo" />
+        <img className="App-logo__image" src={images[0]}  alt="logo" />
+        </div>
         <p>
           Welcome to the app.
         </p>
+        <Metronome />
         <ul>
-         { users.map(user => <li>{user.email}</li>)
+         { users.map(user => <li key={user.email}>{user.email}</li>)
          }
         </ul>
         <a
