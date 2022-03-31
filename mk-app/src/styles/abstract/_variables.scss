@@ -1,0 +1,126 @@
+/* Fonts */
+
+$app-font-stack: 'Avenir Next', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+$app-font-size-body: 16px;
+$app-font-size-stack: 1rem;
+$app-font-size-xxxl: 1rem * 2.75; // 44
+$app-font-size-xxl: 1rem * 2.5; // 44
+$app-font-size-xl: 1rem * 2; // 32
+$app-font-size-lg: 1rem * 1.5; // 24
+$app-font-size-1-37x: 1rem * 1.37; // 22
+$app-font-size-md: 1rem * 1.25; // 20
+$app-font-size-sm: 1rem * 0.875; // 14
+$app-font-size-xs: 1rem * 0.75; // 12
+$app-font-size-xxs: 1rem * 0.625; // 10
+
+$app-font-line-height-stack: 1.4;
+$app-font-line-height-sm: 1.3;
+$app-font-line-height-xs: 1.2;
+$app-font-line-height-xxs: 1.1;
+
+/* Colors */
+
+$app-color-white: #ffffff;
+$app-color-black: #09090b;
+$app-color-transparent: rgba(0, 0, 0, 0);
+
+$app-color-gray: #3c3c3c;
+$app-color-light-gray-02: #f8f8f8;
+$app-color-red: #fd5f55;
+
+
+
+$app-color-primary: #feb406;
+$app-color-primary-01: #fcc355;
+$app-color-yellow: #ee9800;
+$app-color-text: #ffffff;
+
+$app-color-app-bg: $app-color-black;
+
+$app-gradient-main: linear-gradient(
+  134.9deg,
+  $app-color-primary,
+  $app-color-yellow 100%
+);
+
+$app-border-primary: 1px solid $app-color-primary;
+$app-border-primary-opacity: 1px solid rgba(254, 180, 6, 0.3);
+$app-border-gray-01: 1px solid rgba(#252525, 0.1);
+
+/* Radius */
+
+$app-radius-round: 50%;
+$app-radius-pill: 100px;
+$app-radius: 4px;
+$app-radius-xs: 2px;
+$app-radius-sm: 10px;
+$app-radius-md: 18px;
+$app-radius-lg: 25px;
+$app-radius-xl: 40px;
+
+/* Spacings */
+
+$app-gutter: 1rem;
+$app-gutter-xs: $app-gutter * 0.25;
+$app-gutter-sm: $app-gutter * 0.5;
+$app-gutter-075: $app-gutter * 0.75;
+$app-gutter-xl: $app-gutter * 1.5;
+$app-gutter-2g: $app-gutter * 2;
+$app-gutter-3l: $app-gutter * 3;
+$app-gutter-4xl: $app-gutter * 4;
+
+/* Sizes */
+
+$app-size-main-container: 84rem; // 1344px
+$app-size-input-height: 3.375rem; // 54px
+$app-size-button-height: 3.75rem; // 60px
+$app-size-avatar: 4.0625rem; // 65px
+$app-size-avatar-sm: 3.5rem; // 56px
+$app-size-header: 6rem;
+$app-size-safari-layout-fix: 1px;
+
+$app-size-icon-sm: 1rem;
+$app-size-icon: 1.5rem;
+$app-size-icon-md: 1.75rem;
+$app-size-icon-lg: 2rem;
+$app-size-icon-xl: 2.75rem;
+
+/* Screens */
+
+$app-screen-full-hd: 120rem; // 1920px
+$app-screen-laptop: 80rem; // 1280px
+$app-screen-laptop-sm: 64rem; // 1024px
+$app-screen-tablet-landscape: 61.93rem; // 991px
+$app-screen-tablet-portrait: 48rem; // 768px
+$app-screen-mobile-landscape: 46.25rem; // 740px
+$app-screen-mobile-portrait-lg: 30rem; // 480px
+$app-screen-mobile-portrait: 23.4375rem; // 375px
+$app-screen-mobile-sm-portrait: 20rem; // 320px
+
+/* Z indexes */
+$app-z-index-package-section: -1;
+$app-z-index-01: 1;
+$app-z-index-input: 2;
+$app-z-index-error: 3;
+$app-z-index-date-time-pickers: 4;
+$app-z-index-header: 5;
+$app-z-index-sidebar: 6;
+
+/* CSS Variables */
+
+// transition
+$app-transition: all 0.3s ease;
+
+// shadows
+$app-side-shadow: 0 12px 24px 4px rgba(0, 0, 0, 0.1);
+$app-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+$app-shadow-01: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+$app-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+$app-box-shadow-big: 0 24px 48px -12px rgba(0, 0, 0, 0.1);
+$app-box-shadow-big-01: 0 24px 48px -24px rgba(0, 0, 0, 0.27);
+$app-shadow-red: 0 24px 48px -12px $app-color-red;
+$app-shadow-dark-red: 0 12px 16px -2px #c5332b33;
+$app-shadow-yellow: 0 24px 48px -12px $app-color-primary;

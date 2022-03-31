@@ -1,0 +1,92 @@
+/**
+ * Base styles
+ *
+ */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: $app-color-text;
+  font-family: $app-font-stack;
+  font-size: $app-font-size-body;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+  transition: $app-transition;
+}
+
+html,
+body,
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+body,
+#app {
+  flex: 1 1 auto;
+}
+
+html,
+body,
+main,
+#root {
+  display: flex;
+  flex-direction: column;
+}
+body,
+main,
+#root {
+  flex: 1 1 auto;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+body {
+  line-height: $app-font-line-height-sm;
+  background-color: transparent;
+
+  @media not all and (min-resolution: 0.001dpcm) {
+    #root {
+      border: $app-size-safari-layout-fix solid transparent;
+      margin: -#{$app-size-safari-layout-fix};
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  color: $app-color-text;
+  cursor: pointer;
+}
+
+svg {
+  fill: currentColor;
+}
+
+th,
+td {
+  font-weight: 500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

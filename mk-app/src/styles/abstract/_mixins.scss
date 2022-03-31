@@ -1,0 +1,153 @@
+/**
+ * SASS mixins and functions
+ *
+ */
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function px-to-rem($value) {
+  @return #{$value / strip-units($app-font-size-body)}rem;
+}
+
+@mixin media-max($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin media-min($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin media-hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin media-hover-none {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin input-text-color($color) {
+  -webkit-text-fill-color: $color;
+  color: $color;
+}
+
+@mixin input-clear {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+@mixin fixed-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin text-hover {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin button-clear {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+@mixin outline-none {
+  &,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+@function rem($size) {
+  @return $size / $app-font-size-body * 1rem;
+}
+
+@mixin container {
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(15px);
+
+  @include media-max($app-screen-tablet-landscape) {
+    max-width: rem(768px);
+  }
+}

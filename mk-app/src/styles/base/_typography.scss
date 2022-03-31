@@ -1,0 +1,109 @@
+// @font-face {
+//   font-family: 'Avenir Next';
+//   src: local('Avenir Next')
+//     url('../../assets/fonts/AvenirNextLTPro-Regular.otf') format('otf');
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Avenir Next';
+//   src: local('Avenir Next') url('../../assets/fonts/AvenirNextLTPro-Bold.otf')
+//     format('otf');
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Avenir Next';
+//   src: local('Avenir Next') url('../../assets/fonts/AvenirNextLTPro-Medium.otf')
+//     format('otf');
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Avenir Next';
+//   src: local('Avenir Next') url('../../assets/fonts/AvenirNextLTPro-Demi.otf')
+//     format('otf');
+//   font-weight: 600;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+button {
+  font-family: $app-font-stack;
+  color: $app-color-text;
+}
+
+input {
+  font-family: $app-font-stack;
+  font-size: $app-font-size-stack;
+
+  &::placeholder {
+    font-size: $app-font-size-stack;
+  }
+}
+
+h1 {
+  font-size: rem(110px);
+  line-height: 1;
+  margin-bottom: rem(9px);
+  font-weight: bold;
+  text-transform: capitalize;
+
+  @include media-max($app-screen-laptop-sm) {
+    font-size: rem(80px);
+  }
+
+  @include media-max($app-screen-mobile-portrait) {
+    font-size: rem(60px);
+  }
+}
+
+h2 {
+  font-size: rem(41px);
+  font-weight: bold;
+  line-height: $app-font-line-height-sm;
+}
+
+h3 {
+  font-size: $app-font-size-xl;
+  font-weight: 700;
+  line-height: 1.7;
+  margin: rem(16px) 0;
+}
+
+h4 {
+  font-size: $app-font-size-1-37x;
+  line-height: rem(33px);
+  font-weight: 700;
+  margin-bottom: rem(16px);
+}
+
+h5 {
+  font-size: rem(20px);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-size: rem(18px);
+  line-height: rem(24px);
+  font-weight: 500;
+  margin-bottom: rem(8px);
+}
+
+p {
+  font-size: $app-font-size-stack;
+  color: $app-color-text;
+  line-height: $app-font-line-height-stack;
+}
+
+textarea {
+  resize: none;
+}

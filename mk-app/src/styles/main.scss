@@ -1,1 +1,9 @@
-@import '../styles/base.scss'
+@import 'abstract/variables';
+@import 'abstract/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+@import 'components/icon';
+@import 'partials/overrides';
+@import 'partials/utilities';
+@import 'layout/layouts';
